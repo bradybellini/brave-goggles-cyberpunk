@@ -20,6 +20,8 @@ $boost=8,site=theregister.com
 $boost=8,site=404media.co
 $boost=8,site=restofworld.org
 $boost=8,site=technologyreview.com
+$boost=8,site=techmeme.com
+$boost=8,site=news.ycombinator.com
 
 ! --- Broadsheet / investigative ---
 $boost=6,site=nytimes.com
