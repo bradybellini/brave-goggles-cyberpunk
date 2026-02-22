@@ -1,5 +1,5 @@
 ! name: Cyberpunk News Quality Filter
-! description: Boosts quality tech/news outlets and discards junk sources for cyberpunk.gg news pipeline. Covers technology, corporate power, digital rights, capital markets, emerging tech, and planetary health.
+! description: Boosts quality tech/news outlets and discards junk sources for cyberpunk.gg news.
 ! public: true
 ! author: Planetary Industries
 
@@ -121,7 +121,7 @@ $discard,site=prweb.com
 $discard,site=einpresswire.com
 $discard,site=newswire.com
 
-! --- Content farms / clickbait ---
+! --- Content farms ---
 $discard,site=buzzfeed.com
 $discard,site=screenrant.com
 $discard,site=gamerant.com
@@ -135,7 +135,7 @@ $discard,site=mirror.co.uk
 $discard,site=express.co.uk
 $discard,site=nypost.com
 
-! --- Local TV affiliates (syndicated filler) ---
+! --- Local TV affiliates ---
 $discard,site=fox2detroit.com
 $discard,site=fox5dc.com
 $discard,site=fox13memphis.com
@@ -175,7 +175,6 @@ $discard,site=cryptoslate.com
 $discard,site=u.today
 $discard,site=ambcrypto.com
 
-! --- AI-generated / SEO spam ---
 $discard,site=techtimes.com
 $discard,site=ibtimes.com
 $discard,site=ibtimes.co.uk
