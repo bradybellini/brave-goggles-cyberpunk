@@ -1,0 +1,182 @@
+! name: Cyberpunk News Quality Filter
+! description: Boosts quality tech/news outlets and discards junk sources for cyberpunk.gg news pipeline. Covers technology, corporate power, digital rights, capital markets, emerging tech, and planetary health.
+! public: true
+! author: Planetary Industries
+
+! =============================================
+! TIER 1: BOOST — top-tier original reporting
+! =============================================
+
+! --- Wire services ---
+$boost=10,site=reuters.com
+$boost=10,site=apnews.com
+
+! --- Major tech journalism ---
+$boost=8,site=arstechnica.com
+$boost=8,site=wired.com
+$boost=8,site=theverge.com
+$boost=8,site=techcrunch.com
+$boost=8,site=theregister.com
+$boost=8,site=404media.co
+$boost=8,site=restofworld.org
+$boost=8,site=technologyreview.com
+
+! --- Broadsheet / investigative ---
+$boost=6,site=nytimes.com
+$boost=6,site=washingtonpost.com
+$boost=6,site=theguardian.com
+$boost=6,site=ft.com
+$boost=6,site=bloomberg.com
+$boost=6,site=wsj.com
+$boost=6,site=economist.com
+$boost=6,site=theatlantic.com
+$boost=6,site=propublica.org
+$boost=6,site=theintercept.com
+
+! --- Business / finance ---
+$boost=5,site=cnbc.com
+$boost=5,site=fortune.com
+$boost=5,site=businessinsider.com
+$boost=5,site=marketwatch.com
+$boost=5,site=seekingalpha.com
+
+! --- Cybersecurity / infosec ---
+$boost=7,site=krebsonsecurity.com
+$boost=7,site=bleepingcomputer.com
+$boost=7,site=darkreading.com
+$boost=7,site=therecord.media
+$boost=7,site=cyberscoop.com
+$boost=6,site=securityweek.com
+$boost=6,site=threatpost.com
+
+! --- AI / emerging tech ---
+$boost=7,site=spectrum.ieee.org
+$boost=6,site=venturebeat.com
+$boost=5,site=techradar.com
+$boost=5,site=zdnet.com
+$boost=5,site=engadget.com
+
+! --- Digital rights / policy ---
+$boost=8,site=eff.org
+$boost=7,site=techdirt.com
+$boost=6,site=accessnow.org
+$boost=6,site=politico.com
+$boost=5,site=lawfaremedia.org
+
+! --- Science / climate / planetary health ---
+$boost=7,site=nature.com
+$boost=7,site=science.org
+$boost=6,site=newscientist.com
+$boost=6,site=carbonbrief.org
+$boost=5,site=scientificamerican.com
+
+! --- Quality independent / niche ---
+$boost=5,site=protocal.com
+$boost=5,site=semafor.com
+$boost=5,site=defenseone.com
+$boost=5,site=nextgov.com
+$boost=4,site=gizmodo.com
+$boost=4,site=motherboard.vice.com
+$boost=4,site=vice.com
+$boost=4,site=torrentfreak.com
+$boost=4,site=9to5mac.com
+$boost=5,site=tomshardware.com
+$boost=5,site=thenextweb.com
+
+! =============================================
+! TIER 2: DOWNRANK — low-signal sources
+! =============================================
+
+! --- Aggregators / rewriters ---
+$downrank=3,site=msn.com
+$downrank=3,site=news.yahoo.com
+$downrank=3,site=news.google.com
+$downrank=2,site=flipboard.com
+$downrank=2,site=smartnews.com
+
+! --- Social / UGC ---
+$downrank=2,site=reddit.com
+$downrank=2,site=medium.com
+$downrank=2,site=substack.com
+$downrank=2,site=quora.com
+
+! --- SEO-heavy tech blogs ---
+$downrank=3,site=makeuseof.com
+$downrank=3,site=howtogeek.com
+$downrank=3,site=lifehacker.com
+$downrank=3,site=digitaltrends.com
+$downrank=2,site=tomsguide.com
+$downrank=2,site=pcworld.com
+
+! =============================================
+! TIER 3: DISCARD — junk, noise, zero value
+! =============================================
+
+! --- Press release wires ---
+$discard,site=prnewswire.com
+$discard,site=businesswire.com
+$discard,site=globenewswire.com
+$discard,site=accesswire.com
+$discard,site=prweb.com
+$discard,site=einpresswire.com
+$discard,site=newswire.com
+
+! --- Content farms / clickbait ---
+$discard,site=buzzfeed.com
+$discard,site=screenrant.com
+$discard,site=gamerant.com
+$discard,site=cbr.com
+$discard,site=dexerto.com
+$discard,site=sportskeeda.com
+$discard,site=marca.com
+$discard,site=dailymail.co.uk
+$discard,site=thesun.co.uk
+$discard,site=mirror.co.uk
+$discard,site=express.co.uk
+$discard,site=nypost.com
+
+! --- Local TV affiliates (syndicated filler) ---
+$discard,site=fox2detroit.com
+$discard,site=fox5dc.com
+$discard,site=fox13memphis.com
+$discard,site=fox23.com
+$discard,site=fox4kc.com
+$discard,site=fox59.com
+$discard,site=abc7.com
+$discard,site=abc7chicago.com
+$discard,site=abc7ny.com
+$discard,site=abc13.com
+$discard,site=abc15.com
+$discard,site=abc27.com
+$discard,site=ksl.com
+$discard,site=wral.com
+$discard,site=wcvb.com
+$discard,site=wesh.com
+$discard,site=katu.com
+$discard,site=kgw.com
+$discard,site=king5.com
+$discard,site=khou.com
+$discard,site=ksdk.com
+$discard,site=wfaa.com
+$discard,site=wpxi.com
+$discard,site=wlwt.com
+$discard,site=wthr.com
+$discard,site=11alive.com
+$discard,site=12news.com
+$discard,site=13newsnow.com
+
+! --- Crypto/web3 ---
+$boost=4,site=coindesk.com
+$boost=4,site=cointelegraph.com
+$boost=4,site=decrypt.co
+$discard,site=beincrypto.com
+$discard,site=bitcoinist.com
+$discard,site=cryptoslate.com
+$discard,site=u.today
+$discard,site=ambcrypto.com
+
+! --- AI-generated / SEO spam ---
+$discard,site=techtimes.com
+$discard,site=ibtimes.com
+$discard,site=ibtimes.co.uk
+$discard,site=techopedia.com
