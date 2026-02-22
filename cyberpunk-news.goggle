@@ -52,7 +52,6 @@ $boost=6,site=threatpost.com
 ! --- AI / emerging tech ---
 $boost=7,site=spectrum.ieee.org
 $boost=6,site=venturebeat.com
-$boost=5,site=techradar.com
 $boost=5,site=zdnet.com
 $boost=5,site=engadget.com
 
@@ -84,33 +83,29 @@ $boost=5,site=tomshardware.com
 $boost=5,site=thenextweb.com
 
 ! =============================================
-! TIER 2: DOWNRANK — low-signal sources
+! TIER 2: DISCARD — junk, noise, zero value
 ! =============================================
 
 ! --- Aggregators / rewriters ---
-$downrank=3,site=msn.com
-$downrank=3,site=news.yahoo.com
-$downrank=3,site=news.google.com
-$downrank=2,site=flipboard.com
-$downrank=2,site=smartnews.com
+$discard,site=msn.com
+$discard,site=news.yahoo.com
+$discard,site=news.google.com
+$discard,site=flipboard.com
+$discard,site=smartnews.com
 
 ! --- Social / UGC ---
-$downrank=2,site=reddit.com
-$downrank=2,site=medium.com
-$downrank=2,site=substack.com
-$downrank=2,site=quora.com
+$discard,site=reddit.com
+$discard,site=medium.com
+$discard,site=substack.com
+$discard,site=quora.com
 
 ! --- SEO-heavy tech blogs ---
-$downrank=3,site=makeuseof.com
-$downrank=3,site=howtogeek.com
-$downrank=3,site=lifehacker.com
-$downrank=3,site=digitaltrends.com
-$downrank=2,site=tomsguide.com
-$downrank=2,site=pcworld.com
-
-! =============================================
-! TIER 3: DISCARD — junk, noise, zero value
-! =============================================
+$discard,site=makeuseof.com
+$discard,site=howtogeek.com
+$discard,site=lifehacker.com
+$discard,site=digitaltrends.com
+$discard,site=tomsguide.com
+$discard,site=pcworld.com
 
 ! --- Press release wires ---
 $discard,site=prnewswire.com
@@ -121,7 +116,6 @@ $discard,site=prweb.com
 $discard,site=einpresswire.com
 $discard,site=newswire.com
 
-! --- Content farms ---
 $discard,site=buzzfeed.com
 $discard,site=screenrant.com
 $discard,site=gamerant.com
@@ -179,3 +173,49 @@ $discard,site=techtimes.com
 $discard,site=ibtimes.com
 $discard,site=ibtimes.co.uk
 $discard,site=techopedia.com
+
+$discard,site=techradar.com
+$discard,site=windowscentral.com
+$discard,site=androidcentral.com
+$discard,site=imore.com
+$discard,site=techbullion.com
+$discard,site=readwrite.com
+$discard,site=hackread.com
+$discard,site=gadgets360.com
+$discard,site=firstpost.com
+$discard,site=livemint.com
+$discard,site=moneycontrol.com
+$discard,site=ndtv.com
+$discard,site=indiatimes.com
+
+$discard,site=analyticsinsight.net
+$discard,site=cryptodaily.co.uk
+$discard,site=newsbtc.com
+$discard,site=coingape.com
+$discard,site=blockonomi.com
+$discard,site=cryptopotato.com
+$discard,site=thecryptobasic.com
+
+$discard,site=yahoo.com
+$discard,site=benzinga.com
+$discard,site=investopedia.com
+$discard,site=fool.com
+
+! --- Tabloid/clickbait ---
+$discard,site=foxnews.com
+$discard,site=foxbusiness.com
+$discard,site=newsweek.com
+$discard,site=dailydot.com
+$discard,site=mashable.com
+$discard,site=bgr.com
+$discard,site=slashgear.com
+
+$discard,site=wfla.com
+$discard,site=kron4.com
+$discard,site=ktla.com
+$discard,site=wisn.com
+$discard,site=wbaltv.com
+$discard,site=ketv.com
+$discard,site=koat.com
+$discard,site=kmbc.com
+$discard,site=wxyz.com
