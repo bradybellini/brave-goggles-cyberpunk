@@ -1,0 +1,328 @@
+! name: Planetary Industries News Quality Filter
+! description: Master source quality list for all Planetary Industries publications. Comprehensive allowlist of quality journalism across all verticals.
+! public: true
+! author: Planetary Industries
+
+! =============================================
+! HOW THIS GOGGLE WORKS
+! =============================================
+! This is the PI master source list. It operates as a STRICT ALLOWLIST.
+! The global $discard rule below excludes ALL results not explicitly
+! matched by a boost rule. Only approved sources appear in results.
+!
+! Sources are organized by CATEGORY. Within each category, sources are
+! ordered by boost value (highest first) to reflect quality ranking.
+!
+! Boost scale:
+!   10 = Maximum priority
+!    8 = High priority
+!    6 = Standard priority
+!    4 = Lower priority
+!    2 = Minimal priority
+!
+! To add a new source: add a boost rule under the right category.
+! Everything not listed is excluded by default.
+
+! =============================================
+! GLOBAL DEFAULT: DISCARD EVERYTHING NOT LISTED
+! =============================================
+$discard
+
+! --- WIRE SERVICES ---
+$boost=10,site=reuters.com
+$boost=10,site=apnews.com
+
+! --- FINANCIAL PRESS & MARKETS ---
+$boost=10,site=bloomberg.com
+$boost=10,site=ft.com
+$boost=10,site=wsj.com
+$boost=6,site=barrons.com
+$boost=6,site=cnbc.com
+$boost=6,site=fortune.com
+$boost=6,site=marketwatch.com
+$boost=6,site=seekingalpha.com
+$boost=6,site=businessinsider.com
+
+! --- INVESTMENT BANK RESEARCH ---
+$boost=6,site=goldmansachs.com
+$boost=6,site=jpmorgan.com
+$boost=6,site=morganstanley.com
+$boost=6,site=ubs.com
+$boost=6,site=db.com
+$boost=6,site=barclays.co.uk
+$boost=6,site=ib.barclays
+$boost=6,site=blackrock.com
+$boost=6,site=nomura.com
+
+! --- CONSULTING & PROFESSIONAL SERVICES ---
+$boost=6,site=mckinsey.com
+$boost=6,site=bcg.com
+$boost=6,site=bain.com
+$boost=6,site=deloitte.com
+$boost=6,site=pwc.com
+$boost=4,site=ey.com
+$boost=4,site=kpmg.com
+$boost=4,site=accenture.com
+
+! --- CENTRAL BANKS & INTERNATIONAL INSTITUTIONS ---
+$boost=6,site=federalreserve.gov
+$boost=6,site=ecb.europa.eu
+$boost=6,site=bankofengland.co.uk
+$boost=6,site=bis.org
+$boost=6,site=imf.org
+$boost=6,site=worldbank.org
+$boost=6,site=oecd.org
+
+! --- RATING AGENCIES & FINANCIAL DATA ---
+$boost=6,site=spglobal.com
+$boost=6,site=moodys.com
+$boost=6,site=fitchratings.com
+$boost=6,site=msci.com
+$boost=6,site=pitchbook.com
+$boost=6,site=crunchbase.com
+
+! --- INDUSTRY ANALYSTS ---
+$boost=4,site=gartner.com
+$boost=4,site=forrester.com
+$boost=4,site=idc.com
+$boost=4,site=cbinsights.com
+
+! --- TECHNOLOGY ---
+$boost=8,site=arstechnica.com
+$boost=8,site=theverge.com
+$boost=8,site=techcrunch.com
+$boost=8,site=theregister.com
+$boost=8,site=404media.co
+$boost=8,site=wired.com
+$boost=8,site=technologyreview.com
+$boost=8,site=spectrum.ieee.org
+$boost=8,site=theinformation.com
+$boost=8,site=restofworld.org
+$boost=8,site=platformer.news
+$boost=8,site=semianalysis.com
+$boost=4,site=zdnet.com
+$boost=4,site=venturebeat.com
+$boost=4,site=engadget.com
+$boost=4,site=tomshardware.com
+$boost=4,site=thenextweb.com
+$boost=4,site=techdirt.com
+$boost=4,site=torrentfreak.com
+$boost=4,site=gizmodo.com
+$boost=4,site=9to5mac.com
+$boost=4,site=9to5google.com
+$boost=4,site=anandtech.com
+$boost=4,site=hackaday.com
+$boost=4,site=thestack.technology
+$boost=2,site=macrumors.com
+$boost=2,site=slashdot.org
+$boost=2,site=cnet.com
+$boost=2,site=pcmag.com
+
+! --- SIGNAL AGGREGATORS ---
+$boost=8,site=techmeme.com
+$boost=8,site=news.ycombinator.com
+
+! --- CYBERSECURITY ---
+$boost=8,site=krebsonsecurity.com
+$boost=8,site=bleepingcomputer.com
+$boost=8,site=therecord.media
+$boost=6,site=darkreading.com
+$boost=6,site=cyberscoop.com
+$boost=6,site=securityweek.com
+$boost=6,site=threatpost.com
+$boost=6,site=risky.biz
+$boost=2,site=thehackernews.com
+
+! --- BROADSHEET & INVESTIGATIVE ---
+$boost=6,site=nytimes.com
+$boost=6,site=washingtonpost.com
+$boost=6,site=theguardian.com
+$boost=6,site=economist.com
+$boost=6,site=theatlantic.com
+$boost=6,site=propublica.org
+$boost=6,site=theintercept.com
+$boost=6,site=semafor.com
+$boost=6,site=politico.com
+$boost=6,site=bbc.com
+$boost=6,site=bbc.co.uk
+$boost=6,site=npr.org
+$boost=6,site=pbs.org
+$boost=6,site=newyorker.com
+$boost=2,site=thehill.com
+$boost=2,site=axios.com
+$boost=2,site=vice.com
+$boost=2,site=motherboard.vice.com
+
+! --- INTERNATIONAL NEWS ---
+$boost=6,site=nikkei.com
+$boost=6,site=asia.nikkei.com
+$boost=6,site=scmp.com
+$boost=6,site=aljazeera.com
+$boost=6,site=dw.com
+$boost=6,site=france24.com
+$boost=6,site=abc.net.au
+
+! --- SCIENCE & ACADEMIC RESEARCH ---
+$boost=6,site=nature.com
+$boost=6,site=science.org
+$boost=6,site=newscientist.com
+$boost=6,site=carbonbrief.org
+$boost=6,site=quantamagazine.org
+$boost=6,site=phys.org
+$boost=6,site=nber.org
+$boost=6,site=arxiv.org
+$boost=6,site=ssrn.com
+$boost=4,site=scientificamerican.com
+$boost=4,site=livescience.com
+
+! --- SPACE & AEROSPACE ---
+$boost=8,site=spacenews.com
+$boost=6,site=aviationweek.com
+$boost=6,site=flightglobal.com
+$boost=6,site=spaceflightnow.com
+$boost=6,site=nasaspaceflight.com
+$boost=6,site=spacepolicyonline.com
+$boost=6,site=thespacereview.com
+$boost=6,site=spaceref.com
+$boost=6,site=everydayastronaut.com
+$boost=4,site=space.com
+
+! --- DEFENSE & NATIONAL SECURITY ---
+$boost=8,site=breakingdefense.com
+$boost=8,site=defensenews.com
+$boost=6,site=defenseone.com
+$boost=6,site=nextgov.com
+$boost=6,site=federaltimes.com
+$boost=6,site=govexec.com
+$boost=6,site=c4isrnet.com
+$boost=6,site=warontherocks.com
+$boost=6,site=thewarzone.com
+$boost=4,site=janes.com
+$boost=4,site=militarytimes.com
+$boost=4,site=taskandpurpose.com
+$boost=4,site=thedailydog.mil
+
+! --- ENERGY & NUCLEAR ---
+$boost=6,site=utilitydive.com
+$boost=6,site=energymonitor.ai
+$boost=6,site=world-nuclear-news.org
+$boost=6,site=powermag.com
+$boost=6,site=ans.org
+$boost=6,site=energycentral.com
+$boost=6,site=iea.org
+
+! --- HEALTHCARE & BIOTECH ---
+$boost=6,site=statnews.com
+$boost=6,site=endpointsnews.com
+$boost=6,site=biopharmadive.com
+$boost=6,site=fiercepharma.com
+$boost=6,site=fiercebiotech.com
+
+! --- AUTOMOTIVE & EV ---
+$boost=6,site=electrek.co
+$boost=6,site=autonews.com
+$boost=6,site=thedrive.com
+$boost=6,site=insideevs.com
+$boost=6,site=motortrend.com
+
+! --- TELECOM & NETWORKING ---
+$boost=6,site=lightreading.com
+$boost=6,site=fiercetelecom.com
+$boost=6,site=sdxcentral.com
+
+! --- POLICY & THINK TANKS ---
+$boost=6,site=lawfaremedia.org
+$boost=4,site=brookings.edu
+$boost=4,site=cfr.org
+$boost=4,site=rand.org
+$boost=4,site=carnegieendowment.org
+$boost=4,site=csis.org
+$boost=4,site=accessnow.org
+
+! --- DIGITAL RIGHTS ---
+$boost=8,site=eff.org
+
+! --- SUPPLY CHAIN & MANUFACTURING ---
+$boost=6,site=supplychaindive.com
+$boost=6,site=industryweek.com
+
+! --- GAMING ---
+$boost=8,site=gamesindustry.biz
+$boost=8,site=eurogamer.net
+$boost=6,site=polygon.com
+$boost=6,site=kotaku.com
+$boost=6,site=pcgamer.com
+$boost=6,site=rockpapershotgun.com
+$boost=6,site=ign.com
+$boost=6,site=gamespot.com
+$boost=6,site=destructoid.com
+$boost=6,site=escapistmagazine.com
+$boost=6,site=gamesradar.com
+$boost=4,site=dualshockers.com
+$boost=4,site=pushsquare.com
+$boost=4,site=nintendolife.com
+$boost=4,site=toucharcade.com
+$boost=4,site=gamedeveloper.com
+$boost=4,site=uploadvr.com
+
+! --- CRYPTO & WEB3 ---
+$boost=4,site=coindesk.com
+$boost=4,site=cointelegraph.com
+$boost=4,site=decrypt.co
+$boost=4,site=theblock.co
+
+! --- RETAIL & E-COMMERCE ---
+$boost=6,site=retaildive.com
+$boost=6,site=modernretail.co
+
+! --- REAL ESTATE & CONSTRUCTION ---
+$boost=4,site=constructiondive.com
+$boost=4,site=globest.com
+
+! --- EDUCATION ---
+$boost=4,site=highereddive.com
+$boost=4,site=insidehighered.com
+$boost=4,site=chronicle.com
+
+! --- HR & WORKPLACE ---
+$boost=4,site=hrdive.com
+
+! --- FOOD & AGRICULTURE ---
+$boost=4,site=fooddive.com
+
+! --- COMPANY BLOGS & NEWSROOMS ---
+$boost=4,site=blog.google
+$boost=4,site=blogs.microsoft.com
+$boost=4,site=about.fb.com
+$boost=4,site=openai.com
+$boost=4,site=anthropic.com
+$boost=4,site=deepmind.google
+$boost=4,site=aws.amazon.com
+$boost=4,site=investor.apple.com
+$boost=4,site=nvidianews.nvidia.com
+$boost=4,site=newsroom.intel.com
+$boost=4,site=blog.cloudflare.com
+$boost=4,site=engineering.fb.com
+$boost=4,site=ai.meta.com
+$boost=4,site=safety.google
+$boost=4,site=blog.x.com
+$boost=4,site=stability.ai
+$boost=4,site=mistral.ai
+$boost=4,site=x.ai
+$boost=4,site=cohere.com
+$boost=4,site=huggingface.co
+
+! --- GOVERNMENT & INSTITUTIONAL ---
+$boost=4,site=sec.gov
+$boost=4,site=nasa.gov
+$boost=4,site=energy.gov
+$boost=4,site=nist.gov
+$boost=4,site=fcc.gov
+$boost=4,site=ftc.gov
+$boost=4,site=gao.gov
+$boost=4,site=cbo.gov
+$boost=4,site=whitehouse.gov
+$boost=4,site=state.gov
+$boost=4,site=defense.gov
+$boost=4,site=esa.int
+$boost=4,site=iaea.org
